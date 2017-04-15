@@ -1,6 +1,6 @@
 {
   "name": "pictwist",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "twist and play with the colors of an <img/>",
   "main": "index.js",
   "scripts": {
