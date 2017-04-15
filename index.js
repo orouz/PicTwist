@@ -1,4 +1,4 @@
- class PicTwist {
+export default class PicTwist {
     constructor(el, options = {}) {
 
         if (!el instanceof Element || el.tagName !== 'IMG')
