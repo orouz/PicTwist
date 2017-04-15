@@ -1,6 +1,6 @@
-# pictwist 
+# PicTwist 🖼️ 🔀 🌈 
 
-### pick a pic, now twist the RGBA values of every pixel 
+### twist RGBA values of pixels in image elements
 
 
 ## Usage 
