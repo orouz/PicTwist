@@ -1,0 +1,11 @@
+{
+  "name": "pictwist",
+  "version": "0.0.5",
+  "description": "twist and play with the colors of an <img/>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
