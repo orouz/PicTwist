@@ -1,4 +1,4 @@
-export default class PicTwist {
+export default  class Twist {
     constructor(el, options = {}) {
 
         if (!el instanceof Element || el.tagName !== 'IMG')
@@ -11,7 +11,12 @@ export default class PicTwist {
         this.setCanvasPosition()
         this.loadImage()
     }
-
+    get height(){
+      return this.el.height 
+    }
+    get width(){
+      return this.el.width 
+    }
     setCanvasPosition() {
      
         const canvas = document.createElement('canvas')
@@ -19,8 +24,8 @@ export default class PicTwist {
         this.ctx = canvas.getContext('2d')
         this.canvas = canvas
         
-        canvas.width = this.el.width
-        canvas.height = this.el.height
+        canvas.width = this.width
+        canvas.height = this.height
         canvas.style.position = 'absolute'
         canvas.style.left = props.left + 'px'
         canvas.style.top = props.top + 'px'
@@ -29,7 +34,7 @@ export default class PicTwist {
     }
 
     loadImage() {
-        const img = new Image()
+        const img = new Image(this.width,this.height)
         img.crossOrigin = "Anonymous";
         img.src = this.el.getAttribute('src')
         img.onload = this.draw.bind(this)
@@ -38,8 +43,9 @@ export default class PicTwist {
     draw() {
 
         const {ctx,img,options} = this
-        ctx.drawImage(img, 0, 0);
-        const imgData = ctx.getImageData(0, 0, this.el.width, this.el.width)
+        ctx.drawImage(img, 0, 0,this.width,this.height);
+   
+        const imgData = ctx.getImageData(0, 0, this.width, this.height)
         const data = imgData.data
         for (var i = 0; i < data.length; i += 4) {
             
@@ -51,6 +57,7 @@ export default class PicTwist {
         ctx.putImageData(imgData, 0, 0);
     }
 }
+
 
 
 
