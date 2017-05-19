@@ -5,7 +5,7 @@ export default class Twist {
       throw new Error(`PicTwist expects an <img> element, can't work like this man. come on..`)
 
     this.el = el
-    const defaults = ['red', 'green', 'blue', 'alpah'].reduce((a, c) => { a[c] = x => x; return a}, {})
+    const defaults = ['red', 'green', 'blue', 'alpha'].reduce((a, c) => { a[c] = x => x; return a}, {})
     this.setOptions(options, defaults)
     this.setCanvasPosition()
     this.loadImage()
@@ -58,7 +58,7 @@ export default class Twist {
       data[i] = options.red(data[i])
       data[i + 1] = options.green(data[i + 1])
       data[i + 2] = options.blue(data[i + 2])
-      data[i + 3] = options.alpah(data[i + 3])
+      data[i + 3] = options.alpha(data[i + 3])
 
     }
     ctx.putImageData(this.imgData, 0, 0);
