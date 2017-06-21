@@ -17,7 +17,7 @@ you get the current value as the only argument of the function
  */
 const options = {
         red: x => 256  // will set pixels to red  
-        blue: x => Math.random() * 256, // will set pixels blueish 
+        blue: x => Math.random() * 256, // will set the blue pixels to a random color
         green: x => x // default, does nothing (optional) 
         alpah: x => x  // same 
 }
